@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>My First Blog</title>
+</head>
+
+<body>
+
+    <header> 
+        <button id="themeToggle" onclick="toggle()">🔆</button>
+    </header>
+    
+<main>
+
+<div class="container">
+    <div class="blog-img">
+        <img src="./assets/images/blog.png" alt="blog">
+    </div>
+
+    <div class="form">
+        <h2>What's on your mind?</h2>
+    <form action="./blog.html" method="post">
+
+        <label for="username">User Name</label><br>
+        <input type="text" id="username" required><br>
+
+        <label for="title">Title</label><br>
+        <input type="text" id="title" required><br>
+
+        <label for="content">Content</label><br>
+        <textarea id="content" required></textarea><br>
+
+        <button id="formButton" type="submit">Submit</button>
+
+    </form>
+    </div>
+</div>
+
+</main>
+
+</body>
+
+<script src="./assets/js/form.js"></script>
+
+</html>

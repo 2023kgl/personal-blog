@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {                                      /* sets the webpage style before the toggle button is clicked */
+    background-color: whitesmoke;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, main, footer {                 /* do i need this for this landing page of the blog? header and footer don't have any content. only the main. but setting up margin and padding creates the space at the space at the top so my webpage content is more vertically centered as opposed to being at the very top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+}
+
+body.dark-mode {                    /* settings for dark theme - changes backgroung color and text color */
+    background-color: gray;
+    color: white;
+}
+
+#themeToggle {                      /* setting up the style for the toggle buttom */
+    background-color: white;
+    border: black 2px;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+}
+
+#formButton {                       /* setting up the style of submit button for the form */
+background-color: darkgreen;
+color: white;
+border-radius: 5px;
+margin: 5px;
+padding: 5px;
+}
+
+.container {                        /* setting the container that will hold image and form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 20px;
+    border: 3px solid black;
+    width: 100%;
+}
+
+.container .blog-img {              /* setting the box for the image */
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+    width: 40%;
+}
+
+.container .form {                  /* setting the box for the form */
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form h2 {                          /* setting the font for the h2 in the form box */
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+label {                             /* sets the font size to each input label */
+    font-size: 30px;
+}
+
+input {                             /* re-sized the input box for the username and title */
+    width: 500px;
+    padding: 8px;
+}
+
+#content {                          /* re-sized the input box for the content */
+    height: 150px;
+    width: 100%; 
+    resize: vertical;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;                /* reducing font size for smaller screens */
+    }
+
+    .container {
+        flex-direction: column;         /* Stack items vertically */
+        margin: 20px;                   /* Adjust margin for smaller screens */
+    }
+
+    .container .blog-img,
+    .container .form {
+        width: 100%;                    /* Make images and form take full width on smaller screens */
+        margin: 20px 0;                 /* Adjust margin for smaller screens */
+    }
+
+    input[type="text"] {
+        width: 100%;                    /* Make input fields take full width on smaller screens */
+    }
+}
