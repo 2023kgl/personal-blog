@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
     <title>My First Blog</title>
 </head>
 
@@ -22,17 +22,19 @@
 
     <div class="form">
         <h2>What's on your mind?</h2>
-    <form action="./blog.html" method="post">
+
+        <form action="./blog.html" method="post">
 
         <label for="username">User Name</label><br>
-        <input type="text" id="username" required><br>
+        <input type="text" id="username"><br>
 
         <label for="title">Title</label><br>
-        <input type="text" id="title" required><br>
+        <input type="text" id="title"><br>
 
         <label for="content">Content</label><br>
-        <textarea id="content" required></textarea><br>
+        <textarea type="text" id="content"></textarea><br>
 
+        <div id="msg"></div>
         <button id="formButton" type="submit">Submit</button>
 
     </form>

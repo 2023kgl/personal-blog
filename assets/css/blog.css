@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body.dark-mode {                    /* settings for dark theme - changes backgroung color and text color */
+    background-color: gray;
+    color: white;
+}
+
+#themeToggle {                      /* setting up the style for the toggle buttom */
+    background-color: white;
+    border: black 2px;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+}
+
+
+header, main, footer {              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+}
+
+header {                     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 20px;
+    border-bottom: 3px solid black;
+    width: 100%;
+}
+
+#backButton {
+    background-color: white;
+    border: black 2px;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+}
