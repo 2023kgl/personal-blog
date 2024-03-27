@@ -1,36 +1,42 @@
 
-// this is "listening" for the toggle button to be clicked so that it changes to dark mode when clicked
 document.getElementById('themeToggle').addEventListener('click', function(event) {          
     document.body.classList.toggle('dark-mode');
 });
 
-// Get references to form elements
 const form = document.querySelector('form');
 const usernameInput = document.querySelector('#username');
 const titleInput = document.querySelector('#title');
 const contentInput = document.querySelector('#content');
+const getData = localStorage.getItem('blogData')
+console.log(getData)
 
-// Event listener for form submission
-form.addEventListener('submit', function(event) {
+let blogEntries = []
 
-    // Get form input values
+if (getData) {
+    blogEntries = JSON.parse(getData)
+}
+
+formButton.addEventListener('submit', function(event) {
+
     const username = usernameInput.value;
     const title = titleInput.value;
     const content = contentInput.value;
 
-    // Check if any field is empty
     if (username === '' || title === '' || content === '') {
         event.preventDefault()
         alert('Please fill in all fields.');
-        return; // Exit the function
+
+        const blogData = {
+            Username: username.value.trim()
+            Title: title.value.trim()
+            Content: content.value.trim()
+        }
+
+        blogEntries.push(blogData)
+        localStorage.setItem("blogData", JSON.stringify(blogEntries));
+        renderContent()
+        return;
     }
-
-    // Save form data to local storage
-    localStorage.setItem('username', username);
-    localStorage.setItem('title', title);
-    localStorage.setItem('content', content);
-
-    //reset the form fields after saving data
     form.reset();
 });
 
