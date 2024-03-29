@@ -14,5 +14,10 @@ You are able to change the them from white to gray to make it easy on your eyes 
 
 
 
-    ![alt text](personal-blog/assets/images/Blog-screenshot.png)
+https://2023kgl.github.io/personal-blog/
+
+https://github.com/2023kgl/personal-blog
+
+
+    !(./assets/images/Blog-screenshot.png)
     
