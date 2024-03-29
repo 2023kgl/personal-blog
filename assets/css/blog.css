@@ -19,27 +19,6 @@ body.dark-mode {                    /* settings for dark theme - changes backgro
     padding: 5px;
 }
 
-
-header, main, footer {              
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 10px;
-    padding: 20px;
-}
-
-header {                     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 50px 20px;
-    border-bottom: 3px solid black;
-    width: 100%;
-}
-
 #backButton {
     background-color: white;
     border: black 2px;
@@ -49,3 +28,82 @@ header {
     left: 20px;
     padding: 5px;
 }
+
+header, footer {              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+}
+
+header{                     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 20px;
+    border-bottom: 3px solid black;
+    width: 100%;
+    color: black;
+}
+
+footer {                     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 20px;
+    border-top: 3px solid black;
+    width: 100%;
+    color: black;
+    bottom: 10px;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 90px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-section .card {
+    flex: 1;
+    border: 3px solid black;
+    margin: 20px 20px;
+    
+}
+
+.content-section .card h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
+
+.content-section .card p {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.content-section .card h3 {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
+
+
+
+
