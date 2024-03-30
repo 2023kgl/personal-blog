@@ -19,5 +19,5 @@ https://2023kgl.github.io/personal-blog/
 https://github.com/2023kgl/personal-blog
 
 
-    !(./assets/images/Blog-screenshot.png)
+![Personal Blog](./assets/images/Blog-screenshot.png)
     
