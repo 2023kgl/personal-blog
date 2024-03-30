@@ -18,12 +18,6 @@ function getBlogsFromLocalStorage(){
     document.getElementById('content1').textContent = blogEntries[0].content
 }
 
-// function view(){
-//     if ( blogData !== null){
-//         document.querySelector('username1').textContent = JSON.parse(localStorage.getItem('blogData'));
-//     }
-// }
-
 for ( let i=0; i<4 && blogEntries.length; i++ ) {
     const elements = blogEntries;
     console.log(elements)
@@ -31,12 +25,11 @@ for ( let i=0; i<4 && blogEntries.length; i++ ) {
     console.log(titleEl);
     document.getElementById(titleEl).textContent = blogEntries[i].title;
 }
-
 getBlogsFromLocalStorage()
 
-// function saveBlogEntries(blogEntries){
-//     console.log('saveBlogEntry')
-// }
+
+
+
 
 
 
