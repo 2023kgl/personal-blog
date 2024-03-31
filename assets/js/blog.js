@@ -15,36 +15,35 @@ function getBlogsFromLocalStorage(){
 
     let blogEntries = JSON.parse(localStorage.getItem('blogData'));
 
-    document.getElementById('username').textContent = blogEntries[0].username
-    document.getElementById('title').textContent = blogEntries[0].title
-    document.getElementById('content').textContent = blogEntries[0].content
-}
-getBlogsFromLocalStorage()
+    blogEntries.forEach(blogData => {
 
-function onButtonClick() {
+    // let container = document.getElementById("container");
+    // container.appendChild(newCard);
 
     let newCard = document.createElement("div");
-    newCard.className += "section";
+    newCard.className = "section";
 
     let newCardContent = document.createElement("div");
     newCardContent.className = "card";
 
     let newh2 = document.createElement("h2");
-    newh2.textContent = "New Title";
+    newh2.textContent = blogData.Title;
     newCardContent.appendChild(newh2);
 
     let newP = document.createElement("p");
-    newh2.textContent = "New Content";
+    newP.textContent = blogData.Content;
     newCardContent.appendChild(newP);
 
     let newh3 = document.createElement("h3");
-    newh2.textContent = "New Username";
+    newh3.textContent = blogData.Username;
     newCardContent.appendChild(newh3);
+
+    newCard.appendChild(newCardContent);
+    document.body.appendChild(newCard);
+
+});
 }
-
-const formButton = document.getElementById('formButton');
-formButton.addEventListener('click', onButtonClick);
-
+getBlogsFromLocalStorage()
 
 
 
