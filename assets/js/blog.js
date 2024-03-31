@@ -11,21 +11,42 @@ backButton.addEventListener('click', function() {
     window.location.href ="index.html";
 });
 
-let blogEntries = JSON.parse(localStorage.getItem('blogData'));
 function getBlogsFromLocalStorage(){
-    document.getElementById('username1').textContent = blogEntries[0].username
-    document.getElementById('title1').textContent = blogEntries[0].title
-    document.getElementById('content1').textContent = blogEntries[0].content
-}
 
-for ( let i=0; i<4 && blogEntries.length; i++ ) {
-    const elements = blogEntries;
-    console.log(elements)
-    let titleEl = `title${[i+1]}`
-    console.log(titleEl);
-    document.getElementById(titleEl).textContent = blogEntries[i].title;
+    let blogEntries = JSON.parse(localStorage.getItem('blogData'));
+
+    document.getElementById('username').textContent = blogEntries[0].username
+    document.getElementById('title').textContent = blogEntries[0].title
+    document.getElementById('content').textContent = blogEntries[0].content
 }
 getBlogsFromLocalStorage()
+
+function onButtonClick() {
+
+    let newCard = document.createElement("div");
+    newCard.className += "section";
+
+    let newCardContent = document.createElement("div");
+    newCardContent.className = "card";
+
+    let newh2 = document.createElement("h2");
+    newh2.textContent = "New Title";
+    newCardContent.appendChild(newh2);
+
+    let newP = document.createElement("p");
+    newh2.textContent = "New Content";
+    newCardContent.appendChild(newP);
+
+    let newh3 = document.createElement("h3");
+    newh2.textContent = "New Username";
+    newCardContent.appendChild(newh3);
+}
+
+const formButton = document.getElementById('formButton');
+formButton.addEventListener('click', onButtonClick);
+
+
+
 
 
 
