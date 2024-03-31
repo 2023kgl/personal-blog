@@ -38,7 +38,7 @@ form.addEventListener('submit', function(event) {
     localStorage.setItem('blogData', JSON.stringify(blogEntries));
     renderfunction()
     form.reset();
-
+console.log(blogEntries)
 });
 
 function renderfunction(){
